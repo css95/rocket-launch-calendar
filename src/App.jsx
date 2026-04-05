@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { getUpcomingLaunches } from "./services/launchService"
 import LaunchCard from './components/LaunchCard'
+import './App.css'
 
 function App() {
 
@@ -17,7 +18,7 @@ function App() {
 }, [])
 
   return (
-    <div>
+    <div className="app">
       <h1>🚀 Rocket Launch Calendar</h1>
       <p>Fetched {launches.length} upcoming launches</p>
       {launches.map(launch => (
