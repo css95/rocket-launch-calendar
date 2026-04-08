@@ -3,6 +3,7 @@ import { getUpcomingLaunches } from "./services/launchService"
 import LaunchCard from './components/LaunchCard'
 import './App.css'
 import Header from './components/Header'
+import CalendarView from './components/CalendarView'
 
 function App() {
 
@@ -25,7 +26,7 @@ function App() {
         <LaunchCard key={launch.id} launch={launch} />
       ))
   } else {
-    content = <p>Calendar view coming soon!</p>
+    content = <CalendarView launches={launches} />
   }
 
 
