@@ -1,16 +1,27 @@
-# React + Vite
+# 🚀 Rocket Launch Calendar
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A calendar website that displays upcoming rocket launches in both a list and calendar view. 
+Data is fetched from the [Launch Library 2 API](https://thespacedevs.com/llapi) by The Space Devs.
 
-Currently, two official plugins are available:
+This is an ongoing hobby project to teach myself React.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
+- List view with launch details and images
+- Calendar view with month navigation
+- Toggle between list and calendar view
+- Live launch data from The Space Devs API
 
-## React Compiler
+## Tech Stack
+- React + Vite
+- Axios
+- Launch Library 2 API
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Run Locally
+Clone the repo and install dependencies:
+git clone https://github.com/css95/rocket-launch-calendar.git
+cd rocket-launch-calendar
+npm install
+npm run dev
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Live Demo
+[Link coming soon]
