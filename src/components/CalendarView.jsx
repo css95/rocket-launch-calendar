@@ -49,11 +49,29 @@ function CalendarView({ launches }) {
                 <div key={`cell-${i}`} className='calendar__cell'></div>
             ))}
             
-            {days.map(day => (
-                <div key={day} className="calendar__cell">
-                    <span>{day}</span>
-                </div>
-            ))}
+            {days.map(day => {
+                const dayLaunches = launches.filter(launch => {
+                    const launchDate = new Date(launch.net)
+                    
+                    const sameDay = launchDate.getDate() === day
+                    const sameMonth = launchDate.getMonth() === currentDate.getMonth()
+                    const sameYear = launchDate.getFullYear() === year
+
+                    return sameDay && sameMonth && sameYear
+                })
+
+                return (
+                    <div key={day} className="calendar__cell">
+                        <span>{day}</span>
+                        {dayLaunches.map(launch => (
+                            <div key={launch.id} className="launch-tag">
+                                🚀 {launch.name}
+                            </div>
+
+                        ))}
+                    </div>
+                )
+            })}
 
             </div>
         </div>

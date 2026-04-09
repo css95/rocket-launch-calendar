@@ -33,7 +33,6 @@ function App() {
   return (
     <div className="app">
       <Header onViewChange={setView}/>
-      <p>Fetched {launches.length} upcoming launches</p>
       {content}
     </div>
   )
