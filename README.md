@@ -24,4 +24,4 @@ Clone the repo and install dependencies:
 - npm run dev
 
 ## Live Demo
-[Link coming soon]
+[View Live](https://css95.github.io/rocket-launch-calendar/)
