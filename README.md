@@ -18,10 +18,10 @@ This is an ongoing hobby project to teach myself React.
 
 ## Run Locally
 Clone the repo and install dependencies:
-git clone https://github.com/css95/rocket-launch-calendar.git
-cd rocket-launch-calendar
-npm install
-npm run dev
+- git clone https://github.com/css95/rocket-launch-calendar.git
+- cd rocket-launch-calendar
+- npm install
+- npm run dev
 
 ## Live Demo
 [Link coming soon]
