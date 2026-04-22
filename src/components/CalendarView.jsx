@@ -23,11 +23,24 @@ function CalendarView({ launches }) {
         emptyCellCount = firstDayOfMonth - 1
     }
 
-     const emptyDays = [];
-     for (let i = 0; i < emptyCellCount; i++) {
+    const emptyDays = [];
+    for (let i = 0; i < emptyCellCount; i++) {
         emptyDays.push(i)
-     }
+    }
 
+    const fillerCells = [];
+    const cellsLeft = (emptyCellCount + daysInMonth) % 7
+    
+    let fillerCount 
+    if (cellsLeft === 0) {
+        fillerCount = 0
+    } else {
+        fillerCount = 7 - cellsLeft
+    }
+
+    for (let i = 0; i < fillerCount; i++) {
+        fillerCells.push(i)
+    }
 
     return (
         <div className="calendar">
@@ -72,6 +85,10 @@ function CalendarView({ launches }) {
                     </div>
                 )
             })}
+
+            {fillerCells.map(i => (
+                <div key={`filler-${i}`} className="calendar__cell" />
+            ))}
 
             </div>
         </div>
